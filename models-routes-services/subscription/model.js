@@ -50,8 +50,42 @@ SubscriptionSchema.index({ iUserId: 1 });
 
 const SubscriptionModel = UsersDBConnect.model('subscriptions', SubscriptionSchema);
 
-SubscriptionModel.syncIndexes()
-  .then(() => console.log('Subscription Model Indexes Synced'))
-  .catch((err) => console.log('Subscription Model Indexes Sync Error', err));
+async function ensureModelIndexes(model) {
+  if (!model) {
+    console.warn('ensureModelIndexes: model is falsy, skipping index sync.');
+    return;
+  }
+
+  if (process.env.OFFLINE_MODE === 'true') {
+    console.log(`OFFLINE_MODE=true — skipping index operations for model "${model.modelName || 'unknown'}"`);
+    return;
+  }
+
+  try {
+    if (typeof model.syncIndexes === 'function') {
+      await model.syncIndexes();
+      console.log(`Indexes synced (syncIndexes) for model: ${model.modelName}`);
+      return;
+    }
+
+    if (typeof model.createIndexes === 'function') {
+      await model.createIndexes();
+      console.log(`Indexes created (createIndexes) for model: ${model.modelName}`);
+      return;
+    }
+
+    if (typeof model.ensureIndexes === 'function') {
+      await model.ensureIndexes();
+      console.log(`Indexes ensured (ensureIndexes) for model: ${model.modelName}`);
+      return;
+    }
+
+    console.log(`No index sync method available for model: ${model.modelName}. Skipping index sync.`);
+  } catch (err) {
+    console.warn(`Index sync failed for model ${model.modelName}:`, err && err.message ? err.message : err);
+  }
+}
+
+ensureModelIndexes(SubscriptionModel);
 
 module.exports = SubscriptionModel;

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievement Unlocked</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+      color: #1f2937;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .card {
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+    .banner {
+      background: linear-gradient(135deg, #f97316, #facc15);
+      color: white;
+      padding: 28px;
+      text-align: center;
+    }
+    .banner h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .content {
+      padding: 30px;
+    }
+    .content h2 {
+      margin-top: 0;
+      color: #111827;
+    }
+    .meta {
+      background-color: #f9fafb;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px 0;
+      border: 1px solid #e5e7eb;
+    }
+    .meta p {
+      margin: 8px 0;
+      color: #4b5563;
+    }
+    .cta {
+      text-align: center;
+    }
+    .cta a {
+      display: inline-block;
+      background-color: #2563eb;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+    .footer {
+      text-align: center;
+      padding: 18px;
+      background-color: #f9fafb;
+      border-top: 1px solid #f3f4f6;
+      font-size: 12px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="banner">
+      <h1>Achievement Unlocked!</h1>
+    </div>
+    <div class="content">
+      <p>Hi <strong><%= userName || 'Learner' %></strong>,</p>
+      <h2><%= achievementTitle %></h2>
+      <p><%= achievementDescription %></p>
+      <div class="meta">
+        <p><strong>Type:</strong> <%= achievementType %></p>
+        <% if (metadata && metadata.badgeName) { %>
+          <p><strong>Badge:</strong> <%= metadata.badgeName %></p>
+        <% } %>
+        <% if (metadata.badgeDescription) { %>
+          <p><strong>Details:</strong> <%= metadata.badgeDescription %></p>
+        <% } %>
+        <% if (metadata.quizTitle) { %>
+          <p><strong>Quiz:</strong> <%= metadata.quizTitle %></p>
+        <% } %>
+        <% if (metadata.score) { %>
+          <p><strong>Score:</strong> <%= metadata.score %></p>
+        <% } %>
+      </div>
+      <div class="cta">
+        <p>Keep up the great work and continue your learning streak!</p>
+        <a href="<%= ctaUrl %>"><%= ctaLabel %></a>
+      </div>
+    </div>
+    <div class="footer">
+      <p>&copy; <%= new Date().getFullYear() %> <%= appName || 'SpongeIn' %>. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
+

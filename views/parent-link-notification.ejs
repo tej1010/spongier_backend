@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<title> Parent Link Notification </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+<meta name="format-detection" content="telephone=no" />
+<style type="text/css">
+	body {
+		margin: 0 !important;
+		padding: 0 !important;
+		-webkit-text-size-adjust: 100% !important;
+		-ms-text-size-adjust: 100% !important;
+		-webkit-font-smoothing: antialiased !important;
+	}
+	img {
+		border: 0 !important;
+		outline: none !important;
+	}
+	p {
+		margin: 0px !important;
+		padding: 0px !important;
+	}
+	table {
+		border-collapse: collapse;
+		mso-table-lspace: 0px;
+		mso-table-rspace: 0px;
+	}
+	td,
+	a,
+	span {
+		border-collapse: collapse;
+		mso-line-height-rule: exactly;
+	}
+	.ExternalClass * {
+		line-height: 100%;
+	}
+
+	@media only screen and (max-width:600px){
+		.main_table {
+			width: 95% !important;
+		}
+		.hide {
+			display: none !important;
+		}
+	}
+</style>
+</head>
+<body style="margin:0px; padding:0px; background-color: #0B0A0A;">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background:  #151414 url('https://spongein-media.s3.ap-south-1.amazonaws.com/email/dark-blue.jpg') repeat;">
+		<tr>
+			<td align="center" valign="top">
+				<table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="main_table" style="table-layout:fixed;">
+					<tr>
+						<td style="height: 40px"></td>
+					</tr>
+					<tr>
+						<td style="height: 40px"></td>
+					</tr>
+					<tr>
+						<td>
+							<table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="main_table" style="table-layout:fixed;">
+								<tr>
+									<td style="text-align: center">
+										<img src="https://spongein-media.s3.ap-south-1.amazonaws.com/email/logo.png" alt="<%= appName || 'Spongein' %> Logo">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td style="height: 20px"></td>
+					</tr>
+						<tr>
+						<td style="height: 40px"></td>
+					</tr>
+				</table>
+				<table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="main_table" style="table-layout:fixed; background: #353131; height: 100%; border-top-left-radius: 4px; border-top-right-radius: 4px; border: 0px;">
+					<tr>
+						<td width="25">&nbsp;</td>
+						<td>
+							<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="main_table" style="table-layout:fixed;">
+								<tr>
+									<td style="height: 40px"></td>
+								</tr>
+								<tr>
+									<td style="font-family: 'Arial'; font-size: 16px; line-height: 22px; font-weight: 700; color: #ffffff !important;">
+										Hello <%= parentName || 'Parent' %>,
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 5px"></td>
+								</tr>
+							</table>
+						</td>
+						<td width="25">&nbsp;</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#0B0A0A" style=" background: #0B0A0A; border: 0px;">
+		<tr>
+			<td align="center" valign="top">
+				<table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="main_table" style="table-layout:fixed; background: #353131; height: 100%; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;">
+					<tr>
+						<td width="25" style="width: 25px;">&nbsp;</td>
+						<td valign="top" align="center">
+							<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="table-layout:fixed; background: #353131; height: 100%;">
+								<tr>
+									<td style="font-size: 0px; line-height: 0px; height: 15px;" height="15"></td>
+								</tr>
+								<tr>
+									<td style="height: 25px;"></td>
+								</tr>
+								<tr>
+									<td
+										style="margin: 0px; font-family: 'Arial'; font-size: 16px; line-height: 26px; color: #ffffff;text-align: left; font-weight: 500;">
+										<strong><%= studentName || 'A student' %></strong> is now connected to your <%= appName || 'SpongeIn' %> parent account.
+									</td>
+								</tr>
+								<tr>
+									<td style="height:24px; font-size: 0px; line-height: 0px;"></td>
+								</tr>
+								<tr>
+									<td
+										style="margin: 0px; font-family: 'Arial'; font-size: 16px; line-height: 26px; color: #ffffff;text-align: left; font-weight: 500;">
+										You can review their learning progress, achievements, and manage permissions directly from your dashboard.
+									</td>
+								</tr>
+								<tr>
+									<td style="height:24px; font-size: 0px; line-height: 0px;"></td>
+								</tr>
+								<tr>
+									<td align="center">
+										<table border="0" cellspacing="0" cellpadding="0">
+											<tr>
+												<td align="center" style="border-radius: 4px;" bgcolor="#F68D2E">
+													<a href="<%= dashboardUrl %>" target="_blank" style="font-family: 'Arial'; font-size: 16px; line-height: 22px; color: #ffffff; text-decoration: none; padding: 14px 30px; display: inline-block;">
+														Open Parent Dashboard
+													</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="height:24px;"></td>
+								</tr>
+								<tr>
+									<td
+										style="margin: 0px; font-family: 'Arial'; font-size: 14px; line-height: 24px; color: #c9c9c9;text-align: center;">
+										If the button doesn't work, copy and paste this link into your browser:<br /><a href="<%= dashboardUrl %>" style="color: #ffffff;"><%= dashboardUrl %></a>
+									</td>
+								</tr>
+								<tr>
+									<td style="height:24px;"></td>
+								</tr>
+								<tr>
+									<td
+										style="margin: 0px; font-family: 'Arial'; font-size: 14px; line-height: 24px; color: #c9c9c9;text-align: left;">
+										If you did not initiate this link, please update your account security settings immediately.
+									</td>
+								</tr>
+								<tr>
+									<td style="height:40px; font-size: 0px; line-height: 0px;"></td>
+								</tr>
+								<tr>
+									<td style="font-family: 'Arial'; font-size: 16px; line-height: 28px; color: #ffffff;">
+										Best Regards,
+									</td>
+								</tr>
+								<tr>
+									<td style="font-family: 'Arial'; font-size: 16px; font-weight: 600; line-height: 28px; color: #ffffff !important;">
+										<%= appName || 'Spongein' %>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 35px;"></td>
+								</tr>
+							</table>
+						</td>
+						<td width="25" style="width: 25px;">&nbsp;</td>
+					</tr>
+				</table>
+				<table width="600" align="center" cellpadding="0" cellspacing="0" align="center" class="main_table" style="table-layout:fixed; background-color: #151414;">
+					<tr>
+						<td style="height:24px; font-size: 0px; line-height: 0px;"></td>
+					</tr>
+				</table>
+
+				<table width="600" align="center" cellpadding="0" cellspacing="0" align="center" class="main_table" style="table-layout:fixed; background-color: #151414;">
+					<tr>
+						<td style="height:32px; font-size: 0px; line-height: 0px;"></td>
+					</tr>
+					<tr>
+						<td style="font-family: 'Arial'; text-align: center; font-size: 16px; line-height: 28px; color: #ffffff;">
+						 &copy; <%= new Date().getFullYear() %> <%= appName || 'Spongein Learning' %>. All rights reserved.
+						</td>
+					</tr>
+					<tr>
+						<td style="height: 32px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
